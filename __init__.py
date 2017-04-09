@@ -23,20 +23,6 @@ class RegistrationForm(Form):
         accept_tos = BooleanField('I accept the <a href="/tos/">Terms of Service</a> and the <a href="/privacy/">Privacy Notice</a> (Last updated never)', [validators.Required()])
 
 
-
-@app.route('/', methods=["GET", "POST"])
-def homepage():
-	return render_template("index.html")
-
-@app.route('/dashboard')
-def dashboard():
-        flash("Hey looks like you made it to the Dashboard, you ready to start Shipping yet?")
-        return render_template("dashboard.html", TOPIC = TOPIC)
-
-@app.errorhandler(404)
-def page_not_found(e):
-        return render_template("404.html")
-
 @app.errorhandler(405)
 def method_not_found(e):
         return render_template("405.html")
@@ -51,6 +37,22 @@ def login_required(f):
                         return redirect(url_for('login_page'))
 
         return wrap
+
+@app.route('/', methods=["GET", "POST"])
+def homepage():
+	return render_template("index.html")
+
+@app.route('/dashboard')
+@login_required
+def dashboard():
+        flash("Hey looks like you made it to the Dashboard, you ready to start Shipping yet?")
+        return render_template("dashboard.html", TOPIC = TOPIC)
+
+@app.errorhandler(404)
+def page_not_found(e):
+        return render_template("404.html")
+
+
 
 @app.route("/logout")
 @login_required
@@ -122,9 +124,9 @@ def register_page():
             session['logged_in'] = True
             session['email'] = email
 
-            return redirect(url_for('login'))
+            return redirect(url_for('dashboard'))
 
-    return render_template("login.html", form = form)
+    return render_template("dashboard.html", form = form)
 
 
 
