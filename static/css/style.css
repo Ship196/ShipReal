@@ -152,12 +152,12 @@ fieldset {
 }
 
 .pattern-bg {
-	background: url(../static/images/bg/pattern-bg.png);
+	background: url(../images/bg/pattern-bg.png);
 	background-repeat: repeat;
 }
 
 .grabbing {
-	cursor: url(../static/images/owl-carousel/grabbing.png) 8 8, move;
+	cursor: url(../images/owl-carousel/grabbing.png) 8 8, move;
 }
 
 .divider > i {
@@ -547,7 +547,7 @@ tr > td:nth-child(2) {
 /* About */
 
 .about {
-	background: url(../static/images/bg/shipbackabout.png);
+	background: url(../images/bg/shipbackabout.png);
 }
 
 .about-me-text {
@@ -575,7 +575,7 @@ tr > td:nth-child(2) {
 /*sign */
 
 .sign {
-  background: url(../static/images/bg/shipback1.png);
+  background: url(../images/bg/shipback1.png);
 }
 
 .sign-text {
@@ -650,7 +650,7 @@ tr > td:nth-child(2) {
 /* Subscribe */
 
 .subscribe .modal-content {
-	background: url(../static/images/bg/subscribe-pattern.png);
+	background: url(../images/bg/subscribe-pattern.png);
 	background-repeat: repeat;
 }
 
@@ -847,7 +847,7 @@ ul.portfolio li.active {
 /* Testimonial */
 
 .testimonial-section {
-    background: url(../static/images/bg/pattern-bg.png);
+    background: url(../images/bg/pattern-bg.png);
 }
 
 .testimonial-carousel-list {
@@ -933,7 +933,7 @@ ul.portfolio li.active {
 /* Statistics */
 
 .statistics-section {
-    background: url(../static/images/bg/statistics.jpg);
+    background: url(../images/bg/statistics.jpg);
     background-size: cover;
 	background-attachment: fixed;
 }
@@ -1022,7 +1022,7 @@ ul.portfolio li.active {
 /* Call to Action */
 
 .call-to-action {
-	background: url(../static/images/bg/call-to-action.png);
+	background: url(../images/bg/call-to-action.png);
 	background-attachment: fixed;
 	background-repeat: repeat;
 }
@@ -1210,7 +1210,7 @@ ul.portfolio li.active {
 /* Footer */
 
 .footer-section {
-    background: url(../static/images/bg/footer-bg.png);
+    background: url(../images/bg/footer-bg.png);
 	background-repeat: repeat;
     padding: 40px 0px;
     color: #f8f8f8;
