@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
-from content_management import Content
+#from content_management import Content
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart
@@ -8,7 +8,8 @@ from functools import wraps
 from dbconnect import connection
 import gc
 
-TOPIC = Content()
+#TOPIC = Content()
+TOPIC = "Big Dicks"
 
 app = Flask(__name__)
 
