@@ -133,6 +133,14 @@ def register_page():
 def about_page():
     return render_template("about.html")
 
+@app.route("/newsfeed")
+def newsfeed_page():
+    return render_template("newsfeed.html")
+
+@app.route("/chat")
+def chat_page():
+    return render_template("chat.html")
+
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
