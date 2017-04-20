@@ -141,6 +141,9 @@ def newsfeed_page():
 def chat_page():
     return render_template("chat.html")
 
+@app.route("/create")
+def create_page():
+    return render_template("create.html")
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
