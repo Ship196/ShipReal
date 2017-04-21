@@ -35,6 +35,12 @@ def read(email_input):
     data = User(content)
     return data
 
+def get_uid(email_input):
+    c, conn = connection()
+    content = c.execute("SELECT uid FROM users WHERE email = " + "'" + email_input + "'")
+    content = c.fetchone()
+    return content[0]
+
 class User:
     uid = 0
     first_name = ""

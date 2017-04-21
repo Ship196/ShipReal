@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash, request, url_for, redirect, session
-#from content_management import Content
+from creat_object import User_list, User, read
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from MySQLdb import escape_string as thwart
@@ -46,7 +46,8 @@ def homepage():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-        flash("Hey looks like you made it to the Dashboard, you ready to start Shipping yet?")
+    if request.method = "POST":
+        new_val = User(())
         return render_template("dashboard.html", TOPIC = TOPIC)
 
 @app.errorhandler(404)
