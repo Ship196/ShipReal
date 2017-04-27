@@ -43,12 +43,13 @@ def login_required(f):
 def homepage():
 	return render_template("index.html")
 
-@app.route('/dashboard')
+@app.route('/dashboard', methods=["POST", "GET"])
 @login_required
 def dashboard():
-    if request.method == "POST":
-        new_val = User(())
+    if request.method == "GET":
         return render_template("dashboard.html", TOPIC = TOPIC)
+    else: 
+        return "hello world"
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -78,7 +79,7 @@ def login_page():
                 session['email'] = request.form['email']
 
                 flash("You are now logged in")
-                return redirect(url_for("dashboard"))
+                return render_template("dashboard.html")
             else:
                 error = "Invaild credentials. Try again."
                 return render_template("login.html", error = error)
