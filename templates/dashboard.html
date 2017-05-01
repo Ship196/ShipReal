@@ -124,24 +124,24 @@
                                 <h4 class="title">Edit Profile</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form method=post action ="/dashboard">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Nickname</label>
-                                                <input type="text" class="form-control" placeholder="Young Dagger Dick">
+                                                <input type="text" name="nickname" class="form-control" placeholder="Young Dagger Dick">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Year</label>
-                                                <input type="text" class="form-control" placeholder="2020">
+                                                <input type="text" name="year" class="form-control" placeholder="2020">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" placeholder="Email">
+                                                <input type="email" name="email" class="form-control" placeholder="Email">
                                             </div>
                                         </div>
                                     </div>
@@ -150,13 +150,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>First Name</label>
-                                                <input type="text" class="form-control" placeholder="Zuhayer">
+                                                <input type="text" name="firstname" class="form-control" placeholder="Zuhayer">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Last Name</label>
-                                                <input type="text" class="form-control" placeholder="Green">
+                                                <input type="text" name="lastname" class="form-control" placeholder="Green">
                                             </div>
                                         </div>
                                     </div>
@@ -165,7 +165,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Residence Hall/Address</label>
-                                                <input type="text" class="form-control" placeholder="Nugent Hall, 207 East Gregory Drive">
+                                                <input type="text" name="residencehall" class="form-control" placeholder="Nugent Hall, 207 East Gregory Drive">
                                             </div>
                                         </div>
                                     </div>
@@ -174,19 +174,19 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>City of Origin!</label>
-                                                <input type="text" class="form-control" placeholder="Fremont">
+                                                <input type="text" name="city" class="form-control" placeholder="Fremont">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>State of Origin!</label>
-                                                <input type="text" class="form-control" placeholder="California">
+                                                <input type="text" name="state" class="form-control" placeholder="California">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Country of Origin!</label>
-                                                <input type="number" class="form-control" placeholder="United States">
+                                                <input type="number" name="country" class="form-control" placeholder="United States">
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                             <label for="sell">Gender</label>
-                                            <select class="form-control" id="sell">
+                                            <select class="form-control" name="gender">
                                                     <option>Male</option>
                                                     <option>Female</option>
                                                     <option>Other</option>
@@ -205,7 +205,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                             <label for="sell">Interested In</label>
-                                            <select class="form-control" id="sell">
+                                            <select class="form-control" id="gender">
                                                     <option>Females</option>
                                                     <option>Males</option>
                                                     <option>Both</option>
@@ -216,7 +216,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="birthday">Birthday</label>
-                                                <input type="birthday" class="form-control" placeholder="04/20/2020">
+                                                <input type="birthday" name="birthday" class="form-control" placeholder="04/20/2020">
                                             </div>
                                         </div>                                       
                                     </div>
@@ -225,19 +225,19 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Major</label>
-                                                <input type="text" class="form-control" placeholder="Computer Science">
+                                                <input type="text" name="major" class="form-control" placeholder="Computer Science">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Secondary Major</label>
-                                                <input type="text" class="form-control" placeholder="Economics">
+                                                <input type="text" name="secondarymajor" class="form-control" placeholder="Economics">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Minor(s)</label>
-                                                <input type="text" class="form-control" placeholder="Statistics, Spanish, etc.">
+                                                <input type="text" name="minor" class="form-control" placeholder="Statistics, Spanish, etc.">
                                             </div>
                                         </div>                                       
                                     </div>
@@ -246,7 +246,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                             <label for="sell">Where you spend time</label>
-                                            <select class="form-control" id="sell">
+                                            <select class="form-control" name="spendtime">
                                                     <option>PAR/FAR</option>
                                                     <option>Ike North</option>
                                                     <option>Ike South</option>
@@ -257,7 +257,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                             <label for="sell">Music Taste</label>
-                                            <select class="form-control" id="sell">
+                                            <select class="form-control" name="music">
                                                     <option>Rap</option>
                                                     <option>Pop</option>
                                                     <option>EDM</option>
@@ -268,7 +268,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                             <label for="sell">Green Street Eats</label>
-                                            <select class="form-control" id="sell">
+                                            <select class="form-control" name="greenstreeteats">
                                                     <option>Jurassic Grill</option>
                                                     <option>Bangkok Thai</option>
                                                     <option>Noodles and Co.</option>
@@ -283,7 +283,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>About Me</label>
-                                                <textarea rows="5" class="form-control" placeholder="A Short Bio!"></textarea>
+                                                <textarea rows="5" name="aboutme" class="form-control" placeholder="A Short Bio!"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -291,24 +291,6 @@
 
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                                     <div class="clearfix"></div>
-                                    <script type="text/javascript">
-                                         $(document).ready(function () {
-                                    $("input#submit").click(function(){
-                                        $.ajax({
-                                        type: "POST",
-                                        url: "process.php", //process to mail
-                                        data: $('form.contact').serialize(),
-                                        success: function(msg){
-                                            $("#thanks").html(msg) //hide button and show thank you
-                                            $("#form-content").modal('hide'); //hide popup  
-                                        },
-                                        error: function(){
-                                            alert("failure");
-                                        }
-                                    });
-                                });
-                                });
-                                    </script>
                                 </form>
                             </div>
                         </div>
